@@ -10,7 +10,7 @@ const loginLimiter = rateLimit({
     }
 })
 
-const requestLimiter = rateLimit({
+export const requestLimiter = rateLimit({
     windowMs : 15 * 60 * 1000,
     max : 4,
     message : {
@@ -23,4 +23,4 @@ const requestLimiter = rateLimit({
 
 
 export default loginLimiter;
-export default requestLimiter;
+

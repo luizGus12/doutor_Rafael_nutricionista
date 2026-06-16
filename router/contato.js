@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Contato from "../models/Contato.js";
 import {auth} from "../middleware/auth.js";
 import validator from "validator";
-import requestLimiter from "../middleware/rateLimit.js"
+import {requestLimiter} from "../middleware/rateLimit.js"
 const router = express.Router();
 mongoose.set("sanitizeFilter", true);
 
