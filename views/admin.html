@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Administrativo</title>
+
+<link rel="stylesheet" href="css/admin.css">
+<link rel="icon" href="imagens/favicon.png" type="image/png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>NutriAdmin</h2>
+
+        <p>Painel</p>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </li>
+
+            <li id="menu-mensagens">
+                <i class="fa-solid fa-envelope"></i>
+                Mensagens
+            </li>
+
+            <li id="menu-editar">
+                <i class="fa-solid fa-pen"></i>
+                Editar Site
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                Configurações
+            </li>
+
+            <li id="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+<main>
+
+<header>
+
+    <h1>Painel Administrativo</h1>
+
+</header>
+
+<section class="cards">
+
+    <div class="card">
+
+        <h3>Total de Mensagens</h3>
+
+        <span id="total-msg">
+            0
+        </span>
+
+    </div>
+
+    <!-- <div class="card">
+
+        <h3>Não Lidas</h3>
+
+        <span id="nao-lidas">
+            0
+        </span>
+
+    </div> -->
+
+    <!-- <div class="card">
+
+        <h3>Visualizações</h3>
+
+        <span>
+            0
+        </span>
+
+    </div> -->
+
+</section>
+
+<section class="mensagens">
+
+    <div class="section-title">
+
+        <h2>Mensagens Recebidas</h2>
+
+    </div>
+
+    <div id="container-msg">
+
+        <!-- As mensagens serão renderizadas aqui -->
+
+    </div>
+
+</section>
+
+<section id="editar-site" class="editar-site">
+
+    <div class="section-title">
+
+        <!-- <h2>Editar Site</h2> -->
+
+    </div>
+
+    <form id="form-editar">
+
+        <div class="card-edicao">
+
+            <h3>
+                <i class="fa-solid fa-image"></i>
+                Foto de Perfil
+            </h3>
+
+            <input
+                type="file"
+                id="foto-perfil"
+                accept="image/*"
+            >
+
+        </div>
+
+        <div class="card-edicao">
+
+            <h3>
+                <i class="fa-solid fa-user-doctor"></i>
+                Sobre o Doutor
+            </h3>
+
+            <input
+                type="text"
+                id="nome-medico"
+                placeholder="Nome do profissional"
+            >
+
+            <textarea
+                id="sobre-medico"
+                rows="8"
+                placeholder="Digite a descrição do profissional..."
+            ></textarea>
+
+        </div>
+
+        <div class="card-edicao">
+
+            <h3>
+                <i class="fa-solid fa-address-book"></i>
+                Informações de Contato
+            </h3>
+
+            <input
+                type="text"
+                id="telefone"
+                placeholder="Telefone"
+            >
+
+            <!-- <input
+                type="text"
+                id="whatsapp"
+                placeholder="WhatsApp"
+            > -->
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+            >
+
+            <input
+                type="text"
+                id="instagram"
+                placeholder="Instagram"
+            >
+
+            <input
+                type="text"
+                id="endereco"
+                placeholder="Endereço"
+            >
+
+        </div>
+
+        <button
+            
+            type="button"
+            class="btn-salvar"
+            id="btn-send"
+        
+        >
+            <i class="fa-solid fa-floppy-disk"></i>
+            Salvar Alterações
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="fechar">
+            &times;
+        </span>
+
+        <h2 id="modal-nome"></h2>
+
+        <p>
+            <strong>Email:</strong>
+            <span id="modal-email"></span>
+        </p>
+
+        <p>
+            <strong>Telefone:</strong>
+            <span id="modal-telefone"></span>
+        </p>
+
+        <!-- Botão WhatsApp -->
+        <a
+            id="btn-whatsapp"
+            class="btn-whatsapp"
+            target="_blank"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            Enviar Mensagem
+        </a>
+
+        <hr>
+
+        <h3>Mensagem</h3>
+
+        <p id="modal-msg"></p>
+
+        <p id="del-msg"></p>
+
+        <button id="delete-btn">
+            <i class="fa-solid fa-trash"></i>
+            Excluir Mensagem
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/renderAdmin.js"></script>
+
+</body>
+</html>

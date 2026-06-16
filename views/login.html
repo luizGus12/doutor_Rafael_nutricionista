@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <section class="login-container">
+
+        <div class="login-card">
+
+            <div class="logo-area">
+                <i class="fa-solid fa-leaf"></i>
+                <h2>Painel Nutricionista</h2>
+                <p>Acesse sua área administrativa</p>
+            </div>
+
+            <form id="login-form">
+
+                <div class="input-group">
+
+                    <label>Usuário</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                        type="text"
+                        id="user"
+                        placeholder="Digite seu usuário"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Senha</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                        type="password"
+                        id="password"
+                        placeholder="Digite sua senha"
+                        required>
+                    </div>
+
+                </div>
+
+                <p id="msg"></p>
+
+                <button id="enviar" type="submit">
+                    Entrar
+                </button>
+                
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="js/autetication.js"></script>
+
+</body>
+</html>
