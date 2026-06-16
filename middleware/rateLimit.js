@@ -23,3 +23,4 @@ const requestLimiter = rateLimit({
 
 
 export default loginLimiter;
+export default requestLimiter;
