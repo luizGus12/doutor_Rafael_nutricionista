@@ -7,7 +7,7 @@ import {requestLimiter} from "../middleware/rateLimit.js"
 const router = express.Router();
 mongoose.set("sanitizeFilter", true);
 
-router.post("" ,requestLimiter, auth, async (req,res)=> {
+router.post("" ,requestLimiter,  async (req,res)=> {
 
     try{
             const{nome, telefone, email , mensagem} = req.body;
