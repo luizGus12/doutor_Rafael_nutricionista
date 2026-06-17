@@ -57,7 +57,7 @@ const db_pass = process.env.DB_PASS;
 mongoose.connect(`mongodb+srv://${db_user}:${db_pass}@cluster0.ustsqqo.mongodb.net/?appName=Cluster0`)
 .then(()=> {
     app.listen(PORT , ()=>{
-       console.log("rodando na porta : ",PORT)
+       console.log("servidor funcionando")
     })
     console.log("conectou ao banco de dados")
 
