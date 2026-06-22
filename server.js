@@ -53,8 +53,9 @@ app.use("/logout" , logout);
 
 const db_user = process.env.DB_USER;
 const db_pass = process.env.DB_PASS;
+const db_connect = process.env.MONGO_URI;
 
-mongoose.connect(`mongodb+srv://${db_user}:${db_pass}@cluster0.ustsqqo.mongodb.net/?appName=Cluster0`)
+mongoose.connect(db_connect)
 .then(()=> {
     app.listen(PORT , ()=>{
        console.log("servidor funcionando")
