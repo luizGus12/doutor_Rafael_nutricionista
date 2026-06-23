@@ -51,18 +51,19 @@ app.use("/logout" , logout);
 
 
 
-const db_user = process.env.DB_USER;
-const db_pass = process.env.DB_PASS;
+
 const db_connect = process.env.MONGO_URI;
 
 mongoose.connect(db_connect)
 .then(()=> {
-    app.listen(PORT , ()=>{
-       console.log("servidor funcionando")
-    })
+    // app.listen(PORT , ()=>{
+    //    console.log("servidor funcionando")
+    // })
     console.log("conectou ao banco de dados")
 
 })
 .catch((error)=> {
     console.log(error)
 })
+
+export default app;
