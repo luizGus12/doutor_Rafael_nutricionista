@@ -46,10 +46,7 @@ app.use("/admin" , renderAdmin);
 import logout from "./router/logout.js"
 app.use("/logout" , logout);
 
-app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: "./public" });
 
-});
 
 
 
