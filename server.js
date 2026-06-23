@@ -47,9 +47,8 @@ import logout from "./router/logout.js"
 app.use("/logout" , logout);
 
 app.get("/", (req, res) => {
-    res.json({
-        mensagem: "API funcionando"
-    });
+    res.sendFile("index.html", { root: "./public" });
+
 });
 
 
