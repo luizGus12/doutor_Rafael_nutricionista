@@ -46,10 +46,7 @@ app.use("/admin" , renderAdmin);
 import logout from "./router/logout.js"
 app.use("/logout" , logout);
 
-app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: "./public" });
 
-});
 
 
 
@@ -59,9 +56,9 @@ const db_connect = process.env.MONGO_URI;
 
 mongoose.connect(db_connect)
 .then(()=> {
-    // app.listen(PORT , ()=>{
-    //    console.log("servidor funcionando")
-    // })
+    app.listen(PORT , ()=>{
+        console.log("servidor funcionando")
+     })
     console.log("conectou ao banco de dados")
 
 })
@@ -69,4 +66,4 @@ mongoose.connect(db_connect)
     console.log(error)
 })
 
-export default app;
+
